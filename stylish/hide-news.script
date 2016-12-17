@@ -1,0 +1,13 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("yandex.ru") {
+  .container__first, .container__banner { display: none; }
+}
+
+@-moz-document domain("mail.ru") {
+  #news { display: none; }
+}
+
+@-moz-document domain("lenta.ru") {
+  body div { display: none; }
+}
