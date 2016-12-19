@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Resize images
+# Author: https://github.com/olegkoveshnikov
+#
 
 if [ -d photos ]; then
 	rm -rf photos
@@ -11,7 +15,7 @@ do
 	filename=$(basename "$img")
 	filename="${filename%.*}"
 	
-	convert "$img" -resize 800x600 -quality 85% "photos/$filename.jpg"
+	convert "$img" -auto-orient -resize 1000x800 -quality 85% "photos/$filename.jpg"
 done;
 
 mogrify -strip photos/*.jpg
